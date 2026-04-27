@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-black: #222222;
+  --color-gray: #7B7B7B;
+  --color-offwhite: #F8F8F8;
+  --color-white: #FFFFFF;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  background-color: var(--color-offwhite);
+  background-image: 
+    linear-gradient(var(--color-black) 2px, transparent 2px),
+    linear-gradient(90deg, var(--color-black) 2px, transparent 2px);
+  background-size: 40px 40px;
+  background-position: center center;
+  color: var(--color-black);
+  overflow-x: hidden;
+  line-height: 1.5;
+  cursor: crosshair;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Brutalist Utilities */
+.brutalist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.brutalist-section {
+  padding: 80px 0;
+  border-bottom: 4px solid var(--color-black);
+}
+
+.brutalist-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border: 3px solid var(--color-black);
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 6px 6px 0px var(--color-black);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.brutalist-button:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0px var(--color-black);
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.brutalist-button:active {
+  transform: translate(6px, 6px);
+  box-shadow: 0px 0px 0px var(--color-black);
+}
+
+.brutalist-card {
+  background-color: var(--color-white);
+  border: 3px solid var(--color-black);
+  padding: 2rem;
+  box-shadow: 8px 8px 0px var(--color-gray);
+  transition: all 0.3s ease;
+}
+
+.brutalist-card:hover {
+  transform: translate(-4px, -4px);
+  box-shadow: 12px 12px 0px var(--color-black);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-offwhite);
+  border-left: 2px solid var(--color-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-black);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray);
+}
+
+/* Decorative brutalist elements */
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  border-top: 4px solid var(--color-black);
+  border-bottom: 4px solid var(--color-black);
+  background-color: var(--color-white);
+  padding: 1rem 0;
+}
+
+.brutalist-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 3px solid var(--color-black);
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-shadow: 4px 4px 0px var(--color-black);
+  background-color: var(--color-white);
+  transform: rotate(-2deg);
+}
+
+.bg-text {
+  position: absolute;
+  font-size: 10vw;
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-black);
+  opacity: 0.1;
+  z-index: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.brutalist-stripe-bg {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-black),
+    var(--color-black) 10px,
+    var(--color-offwhite) 10px,
+    var(--color-offwhite) 20px
+  );
+}
+
+.brutalist-divider-marquee {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 1rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-top: 6px solid var(--color-black);
+  border-bottom: 6px solid var(--color-black);
+  white-space: nowrap;
+  overflow: hidden;
+  display: flex;
+}
+
+.solid-block {
+  background-color: var(--color-white);
+  border: 4px solid var(--color-black);
+  padding: 2rem;
+  position: relative;
+  box-shadow: 12px 12px 0px var(--color-black);
+}
+
+@media (min-width: 768px) {
+  .desktop-only {
+    display: block !important;
+  }
+}
