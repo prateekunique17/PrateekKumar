@@ -26,7 +26,7 @@ export default function Navbar() {
         >
           Prateek
         </motion.h1>
-        <div style={{ display: 'flex', gap: '1.5rem', fontWeight: 700, flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: '1rem', fontWeight: 700, overflowX: 'auto', paddingBottom: '5px', whiteSpace: 'nowrap', WebkitOverflowScrolling: 'touch', scrollbarWidth: 'none' }}>
           <a href="#about" className="nav-link" style={{ textDecoration: 'none', color: 'inherit' }}>ABOUT</a>
           <a href="#projects" className="nav-link" style={{ textDecoration: 'none', color: 'inherit' }}>PROJECTS</a>
           <a href="#skills" className="nav-link" style={{ textDecoration: 'none', color: 'inherit' }}>SKILLS</a>

@@ -54,7 +54,7 @@ export default function Projects() {
                 style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', padding: 0, border: '6px solid var(--color-black)' }}
               >
                 {/* Image Placeholder */}
-                <div style={{ flex: '1 1 400px', backgroundColor: 'var(--color-black)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '300px', color: 'var(--color-gray)' }}>
+                <div style={{ flex: '1 1 min(100%, 400px)', backgroundColor: 'var(--color-black)', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '300px', color: 'var(--color-gray)' }}>
                   {proj.image ? (
                     <img src={proj.image} alt={proj.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   ) : (
@@ -66,7 +66,7 @@ export default function Projects() {
                 </div>
                 
                 {/* Content */}
-                <div style={{ flex: '1 1 400px', padding: '2rem', display: 'flex', flexDirection: 'column' }}>
+                <div style={{ flex: '1 1 min(100%, 400px)', padding: '2rem', display: 'flex', flexDirection: 'column' }}>
                   <h3 style={{ fontSize: '2.5rem', marginBottom: '1rem', lineHeight: 1.1 }}>{proj.title}</h3>
                   <p style={{ fontSize: '1.25rem', fontWeight: 500, marginBottom: '2rem', flex: 1 }}>{proj.desc}</p>
                   

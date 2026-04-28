@@ -45,18 +45,18 @@ export default function Hero() {
         >
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
             <div>
-              <div className="brutalist-badge" style={{ marginBottom: '2rem', fontSize: '1.5rem', padding: '1rem 2rem' }}>
+              <div className="brutalist-badge" style={{ marginBottom: '2rem', fontSize: 'clamp(1rem, 4vw, 1.5rem)', padding: '0.75rem 1.5rem' }}>
                 <span style={{ width: '15px', height: '15px', backgroundColor: 'var(--color-black)', borderRadius: '50%', display: 'inline-block' }}></span>
                 AVAILABLE FOR WORK
               </div>
               
               <br />
-              <h2 style={{ fontSize: '2rem', marginBottom: '0.5rem', color: 'var(--color-white)', border: '4px solid var(--color-black)', display: 'inline-block', padding: '0.5rem 1rem', backgroundColor: 'var(--color-black)' }}>
+              <h2 style={{ fontSize: 'clamp(1.2rem, 4vw, 2rem)', marginBottom: '0.5rem', color: 'var(--color-white)', border: '4px solid var(--color-black)', display: 'inline-block', padding: '0.5rem 1rem', backgroundColor: 'var(--color-black)' }}>
                 HELLO, I AM
               </h2>
               
               <h1 style={{ 
-                fontSize: 'clamp(4rem, 8vw, 8rem)', 
+                fontSize: 'clamp(2.5rem, 12vw, 8rem)', 
                 lineHeight: 0.85, 
                 marginBottom: '2rem',
                 marginLeft: '-5px'

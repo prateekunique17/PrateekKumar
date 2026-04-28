@@ -184,3 +184,86 @@ a {
     display: block !important;
   }
 }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .brutalist-section {
+    padding: 60px 0;
+  }
+  
+  .brutalist-container {
+    padding: 0 1rem;
+  }
+
+  .brutalist-divider-marquee {
+    font-size: 1.5rem;
+    padding: 0.75rem 0;
+  }
+
+  .bg-text {
+    font-size: 15vw;
+    -webkit-text-stroke: 1px var(--color-black);
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  body {
+    background-size: 20px 20px;
+    background-image: 
+      linear-gradient(var(--color-black) 1px, transparent 1px),
+      linear-gradient(90deg, var(--color-black) 1px, transparent 1px);
+  }
+
+  h1, h2, h3 {
+    word-break: break-word;
+  }
+  
+  .brutalist-container {
+    padding: 0 0.5rem;
+  }
+
+  .brutalist-section {
+    padding: 40px 0;
+  }
+
+  .brutalist-button {
+    width: 100%;
+    justify-content: center;
+    padding: 1.5rem 1rem !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 0.5rem;
+  }
+
+  .solid-block {
+    padding: 1.5rem 1rem;
+    box-shadow: 4px 4px 0px var(--color-black);
+    font-size: 1.25rem !important;
+  }
+
+  /* Make Project Cards Edge-to-Edge on Mobile */
+  .brutalist-card {
+    border-left: none !important;
+    border-right: none !important;
+    border-radius: 0;
+  }
+
+  /* App-like Carousel for Skills */
+  .mobile-carousel {
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+  }
+  
+  .mobile-carousel > div {
+    scroll-snap-align: center;
+    min-width: 85vw;
+  }
+}

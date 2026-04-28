@@ -35,7 +35,7 @@ export default function Skills() {
           SKILLS
         </h2>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', overflowX: 'auto', paddingBottom: '1rem' }}>
+        <div className="mobile-carousel" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '2rem', overflowX: 'auto', paddingBottom: '1rem' }}>
           {categories.map((cat, i) => (
             <motion.div 
               key={i}
