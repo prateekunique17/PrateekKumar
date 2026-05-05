@@ -1,6 +1,37 @@
+import { useState } from 'react';
 import { Code, Link, Mail, Phone, ArrowUpRight, TerminalSquare, Send } from 'lucide-react';
 
 export default function Contact() {
+  const [result, setResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending...");
+    
+    const formData = new FormData(event.target);
+    formData.append("access_key", "3d1f3e85-8c83-4113-bc2a-348e4bbfee6c");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+      
+      if (data.success) {
+        setResult("Message sent successfully!");
+        event.target.reset(); // clear the form
+      } else {
+        console.log("Error", data);
+        setResult(data.message || "Something went wrong.");
+      }
+    } catch (error) {
+      console.error(error);
+      setResult("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <footer id="contact" style={{ backgroundColor: 'var(--color-white)', borderTop: '4px solid var(--color-black)' }}>
       <div style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -19,22 +50,35 @@ export default function Contact() {
             Open for new opportunities, collaborations, and building impactful projects.
           </p>
 
-          <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
+          <form onSubmit={onSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '500px' }}>
             <div>
               <label style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.25rem' }}>NAME</label>
-              <input type="text" style={{ width: '100%', padding: '1rem', border: '4px solid var(--color-black)', fontSize: '1.25rem', backgroundColor: 'var(--color-offwhite)', outline: 'none' }} placeholder="YOUR NAME" />
+              <input type="text" name="name" required style={{ width: '100%', padding: '1rem', border: '4px solid var(--color-black)', fontSize: '1.25rem', backgroundColor: 'var(--color-offwhite)', outline: 'none' }} placeholder="YOUR NAME" />
             </div>
             <div>
               <label style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.25rem' }}>EMAIL</label>
-              <input type="email" style={{ width: '100%', padding: '1rem', border: '4px solid var(--color-black)', fontSize: '1.25rem', backgroundColor: 'var(--color-offwhite)', outline: 'none' }} placeholder="YOUR EMAIL" />
+              <input type="email" name="email" required style={{ width: '100%', padding: '1rem', border: '4px solid var(--color-black)', fontSize: '1.25rem', backgroundColor: 'var(--color-offwhite)', outline: 'none' }} placeholder="YOUR EMAIL" />
             </div>
             <div>
               <label style={{ display: 'block', fontWeight: 700, marginBottom: '0.5rem', fontSize: '1.25rem' }}>MESSAGE</label>
-              <textarea rows="4" style={{ width: '100%', padding: '1rem', border: '4px solid var(--color-black)', fontSize: '1.25rem', backgroundColor: 'var(--color-offwhite)', outline: 'none', resize: 'vertical' }} placeholder="YOUR MESSAGE"></textarea>
+              <textarea rows="4" name="message" required style={{ width: '100%', padding: '1rem', border: '4px solid var(--color-black)', fontSize: '1.25rem', backgroundColor: 'var(--color-offwhite)', outline: 'none', resize: 'vertical' }} placeholder="YOUR MESSAGE"></textarea>
             </div>
-            <button type="button" className="brutalist-button" style={{ width: 'fit-content', marginTop: '1rem' }}>
-              SEND MESSAGE <Send size={24} />
+            
+            <button type="submit" disabled={result === "Sending..."} className="brutalist-button" style={{ width: 'fit-content', marginTop: '1rem', opacity: result === "Sending..." ? 0.7 : 1 }}>
+              {result === "Sending..." ? "SENDING..." : "SEND MESSAGE"} <Send size={24} />
             </button>
+            
+            {result && result !== "Sending..." && (
+              <p style={{ 
+                fontWeight: 'bold', 
+                marginTop: '1rem', 
+                color: result.includes("success") ? 'var(--color-black)' : 'red',
+                borderLeft: `4px solid ${result.includes("success") ? 'var(--color-black)' : 'red'}`,
+                paddingLeft: '1rem'
+              }}>
+                {result}
+              </p>
+            )}
           </form>
         </div>
 
