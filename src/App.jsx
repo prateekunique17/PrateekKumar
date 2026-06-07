@@ -24,6 +24,8 @@ const Divider = ({ text }) => (
 function App() {
   return (
     <>
+    <SEO />
+
       <Navbar />
       <main>
         <Hero />
