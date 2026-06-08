@@ -16,7 +16,7 @@ export default function Skills() {
     },
     {
       title: "TOOLS",
-      skills: ["Git", "GitHub", "Supabase", "Streamlit", "Antigravity"]
+      skills: ["Git", "GitHub", "Supabase", "Streamlit", "Antigravity","Make.com"]
     }
   ];
 
