@@ -31,7 +31,7 @@ const SEO = () => {
       "@type": "Person",
       "name": "Prateek Kumar",
       "jobTitle": "Software Engineer & Founder",
-      "url": "https://vercel.app",
+      "url": "https://prateek-kumar.vercel.app",
       "sameAs": [
         "https://linkedin.com", // Verified Chitkara/Coriolis Engineering Profile Link
         "https://github.com"                 // Your active public code repository hub
