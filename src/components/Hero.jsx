@@ -51,10 +51,11 @@ export default function Hero() {
               </div>
               
               <br />
-              <h2 style={{ fontSize: 'clamp(1.2rem, 4vw, 2rem)', marginBottom: '0.5rem', color: 'var(--color-white)', border: '4px solid var(--color-black)', display: 'inline-block', padding: '0.5rem 1rem', backgroundColor: 'var(--color-black)' }}>
+              <div style={{ fontSize: 'clamp(1.2rem, 4vw, 2rem)', marginBottom: '0.5rem', color: 'var(--color-white)', border: '4px solid var(--color-black)', display: 'inline-block', padding: '0.5rem 1rem', backgroundColor: 'var(--color-black)', fontWeight: 'bold' }}>
                 HELLO, I AM
-              </h2>
+              </div>
               
+              {/* Optimized H1 with visually hidden context keywords for crawlers */}
               <h1 style={{ 
                 fontSize: 'clamp(2.5rem, 12vw, 8rem)', 
                 lineHeight: 0.85, 
@@ -62,6 +63,19 @@ export default function Hero() {
                 marginLeft: '-5px'
               }}>
                 PRATEEK<br/>KUMAR
+                <span style={{
+                  position: 'absolute',
+                  width: '1px',
+                  height: '1px',
+                  padding: '0',
+                  margin: '-1px',
+                  overflow: 'hidden',
+                  clip: 'rect(0, 0, 0, 0)',
+                  whiteSpace: 'nowrap',
+                  border: '0'
+                }}>
+                  {" "}— Software Engineer & Founder Portfolio
+                </span>
               </h1>
             </div>
             
