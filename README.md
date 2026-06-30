@@ -1,16 +1,53 @@
-# React + Vite
+# Hi, I'm Prateek Kumar 👋 
+### Software Engineer & Founder of Mediqueue | DevShare | TheSilentHunt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I am a passionate Software Engineer based in Chandigarh, focused on architecting scalable full-stack web applications, dev tools, and security-focused platforms. I thrive under pressure, building production-grade solutions at fast-paced hackathons and startup challenges.
 
-Currently, two official plugins are available:
+🌐 **Portfolio Website:** [prateek-kumar.vercel.app](https://vercel.app)  
+💼 **LinkedIn:** [://linkedin.com](https://www.://linkedin.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🏆 Hackathon Victories & Key Achievements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+*   **Winner** – Envox Hackathon 🥇
+*   **1st Place** – Finvasia Innovation Hackathon 🥇
+*   **Participant** – Thapar's Makeathon 8
+*   **Participant** – Next Quantum Hackathon 3.0
+*   **Participant** – Startup Sprint (IIT Ropar)
+*   **Participant** – Hackshastra
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Featured Production Builds
+
+### 🏥 [Mediqueue](https://github.com)
+An intelligent healthcare management ecosystem designed to streamline patient onboarding, automate queuing architecture, and optimize medical facility throughput.
+* **Stack:** TypeScript, React, Node.js
+
+### 🛠️ [DevShare](https://github.com)
+A real-time asset collaboration and infrastructure sharing platform tailored to speed up developer workspace synchronization.
+* **Stack:** TypeScript, Next.js
+
+### 🛡️ [The-Silent-Hunt](https://github.com)
+A security threat emulation and vulnerability tracking portal built for capture-the-flag (CTF) environments and system logging.
+* **Stack:** HTML, CSS, JavaScript, Security Tools
+
+---
+
+## 🛠️ Technical Toolkit
+
+*   **Languages:** JavaScript (ES6+), TypeScript, HTML5, CSS3
+*   **Frameworks & Libraries:** React.js, Next.js, Vite, Node.js, Express
+*   **Hosting & Tools:** Vercel, Git, GitHub Actions, Linux
+
+---
+
+## 📈 GitHub Metrics
+
+<p align="left">
+  <img src="https://vercel.app" alt="Prateek's GitHub Stats" width="400" />
+  <img src="https://herokuapp.com" alt="Prateek's Git Streak" width="400" />
+</p>
+
+💡 *Open for software engineering roles, hackathon teaming, and technical product discussions. Drop a line on LinkedIn!*
